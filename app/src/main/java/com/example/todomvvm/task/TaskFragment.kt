@@ -9,8 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.android.architecture.blueprints.todoapp.util.getViewModelFactory
+import com.example.todomvvm.util.getViewModelFactory
 import com.example.todomvvm.R
 import com.example.todomvvm.TaskAdapterTest
 import com.google.android.material.floatingactionbutton.FloatingActionButton

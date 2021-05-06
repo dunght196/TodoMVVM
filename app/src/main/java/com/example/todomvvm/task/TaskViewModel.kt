@@ -1,10 +1,9 @@
 package com.example.todomvvm.task
 
 import androidx.lifecycle.*
-import com.example.android.architecture.blueprints.todoapp.Event
-import com.example.android.architecture.blueprints.todoapp.data.Result
-import com.example.android.architecture.blueprints.todoapp.data.Task
-import com.example.android.architecture.blueprints.todoapp.data.source.TasksRepository
+import com.example.todomvvm.data.Result
+import com.example.todomvvm.data.Task
+import com.example.todomvvm.data.source.TasksRepository
 import kotlinx.coroutines.launch
 
 class TaskViewModel(

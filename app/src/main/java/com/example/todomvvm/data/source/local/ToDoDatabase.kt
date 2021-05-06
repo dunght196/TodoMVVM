@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.example.android.architecture.blueprints.todoapp.data.source.local
+package com.example.todomvvm.data.source.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.example.android.architecture.blueprints.todoapp.data.Task
+import com.example.todomvvm.data.Task
 
 /**
  * The Room Database that contains the Task table.

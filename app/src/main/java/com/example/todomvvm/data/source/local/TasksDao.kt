@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.architecture.blueprints.todoapp.data.source.local
+package com.example.todomvvm.data.source.local
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -22,7 +22,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.example.android.architecture.blueprints.todoapp.data.Task
+import com.example.todomvvm.data.Task
 
 /**
  * Data Access Object for the tasks table.

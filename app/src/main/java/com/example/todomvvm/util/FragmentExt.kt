@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.architecture.blueprints.todoapp.util
+package com.example.todomvvm.util
 
 /**
  * Extension functions for Fragment.
  */
 
 import androidx.fragment.app.Fragment
-import com.example.android.architecture.blueprints.todoapp.TodoApplication
-import com.example.android.architecture.blueprints.todoapp.ViewModelFactory
+import com.example.todomvvm.TodoApplication
+import com.example.todomvvm.ViewModelFactory
 
 fun Fragment.getViewModelFactory(): ViewModelFactory {
     val repository = (requireContext().applicationContext as TodoApplication).taskRepository

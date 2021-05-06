@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.architecture.blueprints.todoapp.data.source.local
+package com.example.todomvvm.data.source.local
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.map
-import com.example.android.architecture.blueprints.todoapp.data.Result
-import com.example.android.architecture.blueprints.todoapp.data.Result.Error
-import com.example.android.architecture.blueprints.todoapp.data.Result.Success
-import com.example.android.architecture.blueprints.todoapp.data.Task
-import com.example.android.architecture.blueprints.todoapp.data.source.TasksDataSource
+import com.example.todomvvm.data.Result
+import com.example.todomvvm.data.Result.Error
+import com.example.todomvvm.data.Result.Success
+import com.example.todomvvm.data.Task
+import com.example.todomvvm.data.source.TasksDataSource
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

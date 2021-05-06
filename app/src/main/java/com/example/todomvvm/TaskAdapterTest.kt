@@ -5,11 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android.architecture.blueprints.todoapp.data.Task
-import com.example.todomvvm.R
+import com.example.todomvvm.data.Task
 
 class TaskAdapterTest() : RecyclerView.Adapter<TaskAdapterTest.ViewHolder>() {
     private var datas: ArrayList<Task> = arrayListOf();

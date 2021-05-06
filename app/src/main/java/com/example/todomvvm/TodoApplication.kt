@@ -14,13 +14,11 @@
  * limitations under the License.
  */
 
-package com.example.android.architecture.blueprints.todoapp
+package com.example.todomvvm
 
 import android.app.Application
-import com.example.android.architecture.blueprints.todoapp.data.source.TasksRepository
+import com.example.todomvvm.data.source.TasksRepository
 import com.example.todomvvm.ServiceLocator
-import timber.log.Timber
-import timber.log.Timber.DebugTree
 
 /**
  * An application that lazily provides a repository. Note that this Service Locator pattern is

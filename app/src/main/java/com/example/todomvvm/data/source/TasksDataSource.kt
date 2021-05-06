@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.architecture.blueprints.todoapp.data.source
+package com.example.todomvvm.data.source
 
 import androidx.lifecycle.LiveData
-import com.example.android.architecture.blueprints.todoapp.data.Result
-import com.example.android.architecture.blueprints.todoapp.data.Task
+import com.example.todomvvm.data.Result
+import com.example.todomvvm.data.Task
 
 /**
  * Main entry point for accessing tasks data.

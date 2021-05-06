@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.example.android.architecture.blueprints.todoapp.EventObserver
-import com.example.android.architecture.blueprints.todoapp.util.getViewModelFactory
+import com.example.todomvvm.EventObserver
+import com.example.todomvvm.util.getViewModelFactory
 import com.example.todomvvm.R
 import kotlinx.android.synthetic.main.fragment_addedittask.*
 
@@ -24,8 +24,7 @@ class AddEditTaskFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_addedittask, container, false)
-        return view
+        return inflater.inflate(R.layout.fragment_addedittask, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -37,9 +36,7 @@ class AddEditTaskFragment : Fragment() {
         save_task_fab.setOnClickListener {
             val title = add_task_title_edit_text.text.toString()
             val description = add_task_description_edit_text.text.toString()
-            if(title != null && description != null) {
-                viewModel.saveTask(title, description)
-            }
+            viewModel.saveTask(title, description)
         }
     }
 

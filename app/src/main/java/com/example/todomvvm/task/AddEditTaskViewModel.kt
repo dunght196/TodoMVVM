@@ -4,9 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.android.architecture.blueprints.todoapp.Event
-import com.example.android.architecture.blueprints.todoapp.data.Task
-import com.example.android.architecture.blueprints.todoapp.data.source.TasksRepository
+import com.example.todomvvm.Event
+import com.example.todomvvm.data.Task
+import com.example.todomvvm.data.source.TasksRepository
 import kotlinx.coroutines.launch
 
 class AddEditTaskViewModel(
@@ -28,7 +28,7 @@ class AddEditTaskViewModel(
     }
 
     fun saveTask(currentTitle: String, currentDescription: String) {
-        val currentTask = taskId;
+        val currentTask = taskId
         if(currentTask != null || isNewTask) {
             createTask(Task(currentTitle, currentDescription))
         }

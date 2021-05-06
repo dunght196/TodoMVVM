@@ -16,6 +16,7 @@
 package com.example.android.architecture.blueprints.todoapp.util
 
 import androidx.test.espresso.IdlingResource
+import com.example.todomvvm.util.SimpleCountingIdlingResource
 
 /**
  * Contains a static reference to [IdlingResource], only available in the 'mock' build type.

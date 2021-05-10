@@ -3,6 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
@@ -70,6 +71,12 @@ dependencies {
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.fragment:fragment-ktx:$fragmentKtxVersion"
+
+    // Hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+//    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hiltAndroidXVersion"
+//    kapt "androidx.hilt:hilt-compiler:$hiltAndroidXVersion"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

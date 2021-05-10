@@ -19,6 +19,8 @@ package com.example.todomvvm
 import android.app.Application
 import com.example.todomvvm.data.source.TasksRepository
 import com.example.todomvvm.ServiceLocator
+import dagger.hilt.android.HiltAndroidApp
+import timber.log.Timber
 
 /**
  * An application that lazily provides a repository. Note that this Service Locator pattern is
@@ -26,6 +28,7 @@ import com.example.todomvvm.ServiceLocator
  *
  * Also, sets up Timber in the DEBUG BuildConfig. Read Timber's documentation for production setups.
  */
+@HiltAndroidApp
 class TodoApplication : Application() {
 
     // Depends on the flavor,
@@ -34,5 +37,6 @@ class TodoApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())
     }
 }

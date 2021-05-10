@@ -24,7 +24,6 @@ class TaskViewModel(
 
     val items: LiveData<List<Task>> = _items
 
-
     private fun filterTasks(tasksResult: Result<List<Task>>): LiveData<List<Task>> {
         // TODO: This is a good case for liveData builder. Replace when stable.
         val result = MutableLiveData<List<Task>>()

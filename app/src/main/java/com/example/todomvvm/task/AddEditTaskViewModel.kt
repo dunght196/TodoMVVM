@@ -7,9 +7,12 @@ import androidx.lifecycle.viewModelScope
 import com.example.todomvvm.Event
 import com.example.todomvvm.data.Task
 import com.example.todomvvm.data.source.TasksRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class AddEditTaskViewModel(
+@HiltViewModel
+class AddEditTaskViewModel @Inject constructor(
     private val tasksRepository: TasksRepository
 ) : ViewModel() {
 

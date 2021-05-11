@@ -9,15 +9,16 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.example.todomvvm.util.getViewModelFactory
 import com.example.todomvvm.R
 import com.example.todomvvm.TaskAdapterTest
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_task.*
 
+@AndroidEntryPoint
 class TaskFragment : Fragment() {
 
-    private val viewModel by viewModels<TaskViewModel> { getViewModelFactory() }
+    private val viewModel by viewModels<TaskViewModel>()
 
     private val args: TaskFragmentArgs by navArgs()
 
@@ -29,8 +30,7 @@ class TaskFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_task, container, false)
-        return view;
+        return inflater.inflate(R.layout.fragment_task, container, false);
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -40,13 +40,17 @@ class TaskFragment : Fragment() {
 
         viewModel.loadTasks(false);
 
-        viewModel.empty.observe(viewLifecycleOwner, Observer {
+        viewModel.empty.observe(viewLifecycleOwner, {
             no_tasks_layout.visibility = if (it) View.VISIBLE else View.GONE
         })
 
-        viewModel.items.observe(viewLifecycleOwner, Observer {
+        viewModel.items.observe(viewLifecycleOwner, {
             listAdapter.initData(it)
         })
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
     }
 

@@ -17,8 +17,6 @@
 package com.example.todomvvm
 
 import android.app.Application
-import com.example.todomvvm.data.source.TasksRepository
-import com.example.todomvvm.ServiceLocator
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 
@@ -30,10 +28,6 @@ import timber.log.Timber
  */
 @HiltAndroidApp
 class TodoApplication : Application() {
-
-    // Depends on the flavor,
-    val taskRepository: TasksRepository
-        get() = ServiceLocator.provideTasksRepository(this)
 
     override fun onCreate() {
         super.onCreate()

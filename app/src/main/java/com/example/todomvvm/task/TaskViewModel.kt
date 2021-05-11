@@ -4,9 +4,12 @@ import androidx.lifecycle.*
 import com.example.todomvvm.data.Result
 import com.example.todomvvm.data.Task
 import com.example.todomvvm.data.source.TasksRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class TaskViewModel(
+@HiltViewModel
+class TaskViewModel @Inject constructor(
     private val tasksRepository: TasksRepository,
     private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
